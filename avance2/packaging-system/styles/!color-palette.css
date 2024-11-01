@@ -1,0 +1,28 @@
+:root {
+    --background-light: #2c2f33;
+    --background-dark: #23272a;
+    --background-not-hover: #404249;
+    --background-hover: #393B40;
+    --text-light: #F2F2F2;
+    --icon-dark: #D7D8D9;
+    --text-gray: #B8BBBF;
+    --text-dark: #686B73;
+    --blue-medium: #5C73F2;
+    --blue-dark: #495ABF;
+    --green: #2A8C4C;
+    --green-dark: #18592F;
+    --red: #D93B48;
+    --red-dark: #A62D2D;
+}
+
+.bg-body-light {
+    background-color: var(--background-light) !important;
+}
+
+.bg-body-dark {
+    background-color: var(--background-dark) !important;
+}
+
+.text-light {
+    color: var(--text-light);
+}

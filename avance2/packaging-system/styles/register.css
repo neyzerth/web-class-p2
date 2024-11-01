@@ -1,0 +1,91 @@
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+}
+
+.row-div {
+    display: flex;
+}
+
+.row-div>* {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-top: 3rem;
+}
+
+.row-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-form>* {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.input-group {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input,
+select {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: .375rem .75rem;
+    border: none;
+    outline: 1px solid var(--text-dark);
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: var(--blue-medium);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.col-sm-4 {
+    width: 33.3333%;
+}
+
+.col-md-8 {
+    width: 66.6667%;
+}
+
+.row-sm-3 {
+    width: 40%;
+}
+
+.row-md-6 {
+    width: 50%;
+}
+
+.row-md-9 {
+    width: 60%;
+}
+
+.row-lg-12 {
+    width: 100%;
+}

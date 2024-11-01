@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../styles/!important.css">
+    <link rel="stylesheet" href="../styles/!color-palette.css">
+    <link rel="stylesheet" href="../styles/panel.css">
+</head>
+
+<body>
+
+    <header class="bg-body-light container">
+        <div>
+            <div class="d-flex align-center">
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Buscar">
+                </form>
+                <ul class="nav mr-auto">
+                    <li>
+                        <a href="#">⚙️</a>
+                    </li>
+                    <li>
+                        <a href="#">✉️</a>
+                    </li>
+                    <li>
+                        <a href="#">➕</a>
+                    </li>
+                    <li>
+                        <a href="#">🗑️</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="refreshPage()">⭮</a>
+                    </li>
+                    <li>
+                        <a href="#" id="prevButton" onclick="changeTable(-1)">&#60;</a>
+                    </li>
+                    <li>
+                        <span id="pageIndicator"></span>
+                    </li>
+                    <li>
+                        <a href="#" id="nextButton" onclick="changeTable(1)">&#62;</a>
+                    </li>
+                </ul>
+                <a href="#">
+                    <img class="rounded-circle" src="https://github.com/mdo.png" width="40" height="40">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div>
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkboxMaestro1" onclick="toggleAllCheckboxes(this, 'table1')"></th>
+                        <th> </th>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>User</th>
+                        <th>Trazability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>1</td>
+                        <td>2024-10-31</td>
+                        <td>Water leak in the building</td>
+                        <td>user-1</td>
+                        <td>trazability-1</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="7">
+                            <strong>Trazability:</strong><br>
+                            Product: Product A<br>
+                            Box: Box 1<br>
+                            Package: Package A<br>
+                            Packaging: Packaging A<br>
+                            State: In progress
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>2</td>
+                        <td>2024-10-30</td>
+                        <td>Network cable break</td>
+                        <td>user-2</td>
+                        <td>trazability-2</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="7">
+                            <strong>Trazability:</strong><br>
+                            Product: Product B<br>
+                            Box: Box 1<br>
+                            Package: Package B<br>
+                            Packaging: Packaging B<br>
+                            State: Complete
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="table2" style="display:none;">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkboxMaestro2" onclick="toggleAllCheckboxes(this, 'table2')"></th>
+                        <th> </th>
+                        <th>#</th>
+                        <th>Father surname</th>
+                        <th>Mother surname</th>
+                        <th>Name</th>
+                        <th>Date of birth</th>
+                        <th>User type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../home/panel.js"></script>
+</body>
+
+</html>

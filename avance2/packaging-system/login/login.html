@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/!important.css">
+    <link rel="stylesheet" href="/styles/!color-palette.css">
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body class="d-flex">
+    <main class="d-flex m-auto">
+        <div id="leftDiv">
+            <a class="d-contents" href="#" id="link">
+                <img class="p mb rounded-circle" src="../structures/svg/padlock-unlocked.svg" alt="" id="toggleImage">
+            </a>
+            <strong id="toggleText">Have you forgotten your password?</strong>
+            <p id="paragraph">Select the icon to request instructions</p>
+        </div>
+        <form action="../process/incidents/addIncident.html" id="rightDiv">
+            <strong style="font-size: 20px;">Hello again!</strong>
+            <p>We are glad to see you again!</p>
+            <input class="form-control" type="text" required placeholder="Usuario">
+            <input class="form-control" type="text" required placeholder="Password">
+            <button class="btn-primary">Login</button>
+        </form>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>

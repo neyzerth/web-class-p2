@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box !important;
+}
+
+.border-top {
+    border-top: 1px solid var(--text-dark) !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--text-dark) !important;
+}
+
+.p {
+    padding: 1rem !important;
+}
+
+.py5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.rounded-border {
+    border-radius: 30px !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-contents {
+    display: contents !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.m-auto {
+    margin: auto !important;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}

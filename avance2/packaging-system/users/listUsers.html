@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../styles/!important.css">
+    <link rel="stylesheet" href="../styles/!color-palette.css">
+    <link rel="stylesheet" href="../styles/panel.css">
+</head>
+
+<body>
+
+    <header class="bg-body-light container">
+        <div>
+            <div class="d-flex align-center">
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Buscar">
+                </form>
+                <ul class="nav mr-auto">
+                    <li>
+                        <a href="#">⚙️</a>
+                    </li>
+                    <li>
+                        <a href="#">✉️</a>
+                    </li>
+                    <li>
+                        <a href="#">➕</a>
+                    </li>
+                    <li>
+                        <a href="#">🗑️</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="refreshPage()">⭮</a>
+                    </li>
+                    <li>
+                        <a href="#" id="prevButton" onclick="changeTable(-1)">&#60;</a>
+                    </li>
+                    <li>
+                        <span id="pageIndicator"></span>
+                    </li>
+                    <li>
+                        <a href="#" id="nextButton" onclick="changeTable(1)">&#62;</a>
+                    </li>
+                </ul>
+                <a href="#">
+                    <img class="rounded-circle" src="https://github.com/mdo.png" width="40" height="40">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div>
+            <!-- Tabla 1 -->
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkboxMaestro1" onclick="toggleAllCheckboxes(this, 'table1')"></th>
+                        <th> </th>
+                        <th>#</th>
+                        <th>Father surname</th>
+                        <th>Mother surname</th>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>User type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>1</td>
+                        <td>Monarrez</td>
+                        <td>Barron</td>
+                        <td>Polo</td>
+                        <td>07-06-2005</td>
+                        <td>Administrator</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>2</td>
+                        <td>Garcia</td>
+                        <td>Lopez</td>
+                        <td>Ana</td>
+                        <td>01-02-2000</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>3</td>
+                        <td>Pérez</td>
+                        <td>García</td>
+                        <td>José</td>
+                        <td>15-04-1995</td>
+                        <td>Supervisor</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>4</td>
+                        <td>Hernández</td>
+                        <td>Martínez</td>
+                        <td>María</td>
+                        <td>20-05-1991</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>5</td>
+                        <td>Ramírez</td>
+                        <td>Castillo</td>
+                        <td>Diego</td>
+                        <td>22-09-1988</td>
+                        <td>Administrator</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>6</td>
+                        <td>Martinez</td>
+                        <td>Cruz</td>
+                        <td>David</td>
+                        <td>15-10-1990</td>
+                        <td>Supervisor</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>7</td>
+                        <td>Lopez</td>
+                        <td>Hernández</td>
+                        <td>Luisa</td>
+                        <td>30-11-1993</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>8</td>
+                        <td>Torres</td>
+                        <td>Pérez</td>
+                        <td>Marco</td>
+                        <td>01-01-1992</td>
+                        <td>Supervisor</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>9</td>
+                        <td>Silva</td>
+                        <td>Reyes</td>
+                        <td>Victor</td>
+                        <td>18-04-1989</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>10</td>
+                        <td>Vega</td>
+                        <td>Alvarez</td>
+                        <td>Rosa</td>
+                        <td>24-07-1994</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fin de la Tabla 1 -->
+
+            <!-- Tabla 2 -->
+            <table id="table2" style="display:none;">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="checkboxMaestro2" onclick="toggleAllCheckboxes(this, 'table2')"></th>
+                        <th> </th>
+                        <th>#</th>
+                        <th>Father surname</th>
+                        <th>Mother surname</th>
+                        <th>Name</th>
+                        <th>Date of bird</th>
+                        <th>User type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>11</td>
+                        <td>Morales</td>
+                        <td>Jiménez</td>
+                        <td>Elena</td>
+                        <td>12-08-1995</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>12</td>
+                        <td>Vázquez</td>
+                        <td>Salazar</td>
+                        <td>Fernando</td>
+                        <td>08-03-1992</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>13</td>
+                        <td>Reyes</td>
+                        <td>Romero</td>
+                        <td>Lucia</td>
+                        <td>05-01-1990</td>
+                        <td>Supervisor</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>14</td>
+                        <td>Castillo</td>
+                        <td>Ortega</td>
+                        <td>Mario</td>
+                        <td>15-05-1985</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>15</td>
+                        <td>Hernández</td>
+                        <td>Silva</td>
+                        <td>Antonio</td>
+                        <td>21-06-1993</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>16</td>
+                        <td>González</td>
+                        <td>Pérez</td>
+                        <td>Cecilia</td>
+                        <td>28-12-1994</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>17</td>
+                        <td>Rojas</td>
+                        <td>Hernández</td>
+                        <td>Jorge</td>
+                        <td>10-10-1996</td>
+                        <td>Supervisor</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>18</td>
+                        <td>Martínez</td>
+                        <td>Sánchez</td>
+                        <td>Laura</td>
+                        <td>02-11-1987</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>19</td>
+                        <td>Jasso</td>
+                        <td>González</td>
+                        <td>Alfredo</td>
+                        <td>17-09-1980</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td onclick="toggleInfo(this)">^</td>
+                        <td>20</td>
+                        <td>Hernández</td>
+                        <td>Ruiz</td>
+                        <td>Patricia</td>
+                        <td>21-02-1989</td>
+                        <td>Employee</td>
+                    </tr>
+                    <tr class="extra-info">
+                        <td colspan="8">Here you can add more information about this person.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Fin de la Tabla 2 -->
+        </div>
+    </main>
+
+    <script src="../home/panel.js"></script>
+</body>
+
+</html>
